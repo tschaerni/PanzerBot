@@ -13,12 +13,10 @@ sched = BlockingScheduler()
 def leet():
 	bot.sendMessage( -3496302, "1337")
     
-def panzertag():
-    
-
 def handle(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
+    user_id = msg['user']['id']
     
     zahl = random.randint(1,4)
 
@@ -32,10 +30,9 @@ def handle(msg):
         bot.sendMessage(chat_id, "BRUMM BRUMM!!!")
     
     if command == '/source':
-        bot.sendMessage(chat_id, "Jaja. SourceCode kommt bald ja noch.")
-    
-    logging.basicConfig(filename='panzerbot.log',level=logging.DEBUG)
-    logging.info(msg)
+        bot.sendMessage(chat_id, "https://github.com/schuwima/PanzerBot/")
+    elif commane == '@PanzerBot /source':
+        bot.sendMessage(chat_id, "https://github.com/schuwima/PanzerBot/")
     
 
 TOKEN = sys.argv[1]
