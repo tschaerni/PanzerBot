@@ -11,7 +11,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 sched = BlockingScheduler()
 
 def leet():
-	bot.sendMessage( -3496302, "1337")
+	bot.sendMessage( sys.argv[2], "1337")
     
 def handle(msg):
     chat_id = msg['chat']['id']
